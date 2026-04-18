@@ -12,5 +12,13 @@ jobs:
       - name: تحميل الكود
         uses: actions/checkout@v4
 
-      - name: خطوة تجريبية
-        run: echo "Hello from CI"
+      - name: تثبيت بايثون
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: تثبيت pytest
+        run: pip install pytest
+
+      - name: تشغيل الاختبارات
+        run: pytest
