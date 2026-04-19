@@ -12,6 +12,9 @@ jobs:
       - name: تحميل الكود
         uses: actions/checkout@v4
 
+      - name: تشغيل Gitleaks
+        uses: zricethezav/gitleaks-action@v2
+
       - name: تثبيت بايثون
         uses: actions/setup-python@v4
         with:
